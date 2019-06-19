@@ -1,27 +1,4 @@
 <section class="todoapp">
-  <header class="header">
-    <h1>Todos</h1>
-    <h4>This represents a tweaked version of this <a
-      href="https://www.sitepoint.com/understanding-component-architecture-angular/">Tutorial</a></h4>
-    <input placeholder="What needs to get done?" class="new-todo"
-           autofocus [(ngModel)]="newTodo.title"
-           (keyup.enter)="addTodo()">
-  </header>
-  <section class="main" *ngIf="toods.length >0">
-    <ul class="todo-list">
-      <li *ngFor="let todo of todos"
-          [class.completed]="todo.completed">
-        <div class="view">
-          <input type="checkbox" class="toggle"
-                 (click)="toggleTodoComplete(todo)"
-                 [checked]="todo.completed">
-          <label >{{todo.title}}</label>
-          <button class="destroy" (click)="removeTodo(todo)"></button>
-        </div>
-      </li>
-    </ul>
-  </section>
-  <footer class="footer" *ngIf="todos.length > 0">
-    <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
-  </footer>
+ <h1>Things, and also Stuff!</h1>
+  <app-todo-list></app-todo-list>
 </section>

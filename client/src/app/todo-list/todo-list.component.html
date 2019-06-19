@@ -1,0 +1,5 @@
+<div *ngFor="let todo of todos">
+  <h2>{{ todo.name }}</h2>
+  <p>{{ todo.description }}</p>
+  <input type="checkbox" [checked]="todo.completed" id="is_complete_{{todo.id}}">
+</div>
