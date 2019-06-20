@@ -1,22 +1,14 @@
-<mat-grid-list cols="2">
-  <mat-grid-tile>
-    <mat-card *ngFor="let todo of todos">
-      <mat-card-title>{{ todo.name }}</mat-card-title>
-      <mat-card-content>
-        <p>{{ todo.description }}</p>
-      </mat-card-content>
-    <mat-card-actions>
-      <mat-slide-toggle [checked]="todo.completed"></mat-slide-toggle>
-    </mat-card-actions>
-  </mat-card>
+<mat-grid-list cols="2" rowHeight="4:3">
+  <mat-grid-tile *ngFor="let todo of todos">
+    <app-todo-item></app-todo-item>
   </mat-grid-tile>
 </mat-grid-list>
 
 <div class="navigation">
 
   <a mat-raised-button href="{{previous}}"
-     [class.disabled]="!previous" color="primary">
+     [disabled]="!previous" color="primary">
     &lt;</a>
-  <a mat-raised-button href="{{next}}" [class.disabled]="!next" color="primary">
+  <a mat-raised-button href="{{next}}" [disabled]="!next" color="primary">
     &gt;</a>
 </div>

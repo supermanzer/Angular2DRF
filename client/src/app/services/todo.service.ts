@@ -13,7 +13,11 @@ export class TodoService {
   constructor(private http: HttpClient) { }
 
   // GET ALL TODOS
-  public getTodos() {
-    return this.http.get(`${API_URL}/todo/`);
+  public getTodos(url?: string) {
+    if (url) {
+      return this.http.get(url);
+    } else {
+      return this.http.get(`${API_URL}/todo/`);
+    }
   }
 }
