@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   //URL of mock API
-  apiUrl: 'http://127.0.0.1:7890'
+  apiUrl: 'http://127.0.0.1:8000'
 };
 
 /*

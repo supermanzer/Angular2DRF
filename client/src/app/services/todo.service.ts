@@ -14,6 +14,6 @@ export class TodoService {
 
   // GET ALL TODOS
   public getTodos() {
-    return this.http.get<Todo[]>(`${API_URL}/todo/`);
+    return this.http.get(`${API_URL}/todo/`);
   }
 }

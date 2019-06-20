@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoCreateComponent } from './todo-create/todo-create.component';
+import {MatCardModule, MatGridListModule, MatButtonModule, MatSlideToggleModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,11 @@ import { TodoCreateComponent } from './todo-create/todo-create.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
